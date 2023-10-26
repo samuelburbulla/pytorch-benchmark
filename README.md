@@ -16,39 +16,14 @@ python run.py
 
 ## Results
 
-### DGX (CPU)
-
-Batch size  1
-  Batches per second: 25.54 +/- 1.65 [16.10, 27.62]
-  Batch latency: 39.375 ms +/- 3.475 ms [36.209 ms, 62.113 ms]
-Batch size  8
-  Batches per second: 7.63 +/- 0.26 [6.26, 7.93]
-  Batch latency: 131.319 ms +/- 5.202 ms [126.065 ms, 159.750 ms]
-
-### DGX (Tesla V100)
-
-Batch size  1
-  Batches per second: 112.09 +/- 4.45 [90.74, 118.14]
-  Batch latency: 8.937 ms +/- 385.166 us [8.465 ms, 11.021 ms]
-Batch size  8
-  Batches per second: 101.00 +/- 4.21 [88.02, 105.87]
-  Batch latency: 9.918 ms +/- 427.305 us [9.446 ms, 11.362 ms]
-
-### Mac M2 Max (CPU)
-
-Batch size  1
-  Batches per second: 32.28 +/- 1.02 [30.81, 35.93]
-  Batch latency: 31.008 ms +/- 950.889 us [27.835 ms, 32.457 ms]
-Batch size  8
-  Batches per second: 8.49 +/- 0.09 [8.21, 8.67]
-  Batch latency: 117.759 ms +/- 1.245 ms [115.307 ms, 121.847 ms]
-
-### Mac M2 Max (MPS)
-
-Batch size  1
-  Batches per second: 94.88 +/- 2.55 [79.31, 100.64]
-  Batch latency: 10.548 ms +/- 301.917 us [9.937 ms, 12.608 ms]
-Batch size  8
-  Batches per second: 92.05 +/- 3.07 [81.55, 96.97]
-  Batch latency: 10.877 ms +/- 377.405 us [10.312 ms, 12.263 ms]
+| Platform | Batch Size | Batches per second [B/s] | Batch Latency [Latency] |
+|----------|------------|--------------------------|-------------------------|
+| **DGX (CPU)** | 1          | 24.32 +/- 1.57 [14.89, 26.66] | 41.368 ms +/- 3.910 ms [37.504 ms, 67.146 ms] |
+|               | 8          | 7.60 +/- 0.27 [6.00, 7.84] | 131.748 ms +/- 5.324 ms [127.631 ms, 166.558 ms] |
+| **DGX (Tesla V100)** | 1          | 101.90 +/- 5.63 [67.22, 108.46] | 9.850 ms +/- 675.859 us [9.220 ms, 14.877 ms] |
+|                      | 8          | **95.05 +/- 4.58** [82.26, 101.83] | 10.546 ms +/- 531.546 us [9.820 ms, 12.156 ms] |
+|  **Mac M2 Max (CPU)** | 1          | 32.05 +/- 1.58 [24.40, 34.52] | 31.290 ms +/- 1.785 ms [28.970 ms, 40.981 ms] |
+|                       | 8          | 8.44 +/- 0.18 [7.41, 8.75] | 118.520 ms +/- 2.635 ms [114.230 ms, 135.022 ms] |
+| **Mac M2 Max (MPS)** | 1          | 94.05 +/- 4.66 [83.04, 103.15] | 10.660 ms +/- 552.632 us [9.695 ms, 12.043 ms] |
+|                      | 8          | **91.71 +/- 5.52** [71.16, 101.72] | 10.947 ms +/- 716.648 us [9.831 ms, 14.053 ms] |
 
